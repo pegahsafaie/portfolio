@@ -35,8 +35,7 @@ layout: page.njk
 						<div class="content">
 							<div class="inner">
 								<h1>{{title}}</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<p></p>
 							</div>
 						</div>
 						<nav>
@@ -53,15 +52,23 @@ layout: page.njk
 				<!-- Main -->
 					<div id="main">
 
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="https://res.cloudinary.com/pegah/image/upload/c_scale,q_auto:best,w_325/v1609247393/Pegah.jpg" alt="Me at VueJS Confrence" /></span>
+								{%- if about.bio %}
+									{{ about.bio }}
+								{% endif %}
+							</article>
+
 						<!-- Articles -->
 							<article id="articles">
 								<h2 class="major">Articles</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<ul>
 									{% for article in articles %}
 										{% if article.title %}
 											<li>
-												{{ article.title }}: {{ article.description }}
+												<a href="{{article.url}}"><span>{{ article.title }}</span></a>: {{ article.description }}
 											</li>
 										{% endif %}
 									{% endfor %}
@@ -71,17 +78,7 @@ layout: page.njk
 						<!-- skills -->
 							<article id="skills">
 								<h2 class="major">Skills</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>to be written</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="https://res.cloudinary.com/pegah/image/upload/v1609247393/Pegah.jpg" alt="" /></span>
-								{%- if about.bio %}
-									{{ about.bio }}
-								{% endif %}
 							</article>
 
 						<!-- Contact -->
@@ -108,22 +105,19 @@ layout: page.njk
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/pegahsafaie" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/pegahsafaie/portfolio" class="icon fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
 						<!-- Projects -->
 							<article id="projects">
 								<h2 class="major">Projects</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<ul>
 									{% for project in projects %}
 										{% if project.title %}
 											<li>
-												{{ project.title }}: {{ project.description }}
+												<a href="{{project.url}}"><span>{{ project.title }}</span></a>: {{ project.description }}
 											</li>
 										{% endif %}
 									{% endfor %}
@@ -143,11 +137,11 @@ layout: page.njk
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-	{% if topjs %}
-      		{% for link in topjs %}
-         		<script src="{{link}}" />
-      		{% endfor %}
-    	{% endif %}
+		{% if topjs %}
+			{% for link in topjs %}
+				<script src="{{link}}" />
+			{% endfor %}
+    {% endif %}
 
 	</body>
 </html>
