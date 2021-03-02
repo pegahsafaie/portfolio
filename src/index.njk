@@ -16,11 +16,8 @@ layout: page.njk
 		<title>{{title}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	{% if css %}
-      		{% for link in css %}
-         		<link rel="stylesheet" href="{{link}}" />
-      		{% endfor %}
-    	{% endif %}
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -43,7 +40,7 @@ layout: page.njk
 								<li><a href="#articles">Articles</a></li>
 								<li><a href="#projects">Projects</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="#skills">Skills</a></li>
+								<!--<li><a href="#skills">Skills</a></li>-->
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -55,7 +52,7 @@ layout: page.njk
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="https://res.cloudinary.com/pegah/image/upload/c_scale,q_auto:best,w_325/v1609247393/Pegah.jpg" alt="Me at VueJS Confrence" /></span>
+								<span class="image main"><img src="https://res.cloudinary.com/pegah/image/upload/c_scale,q_auto:best/v1609247393/Pegah.jpg" alt="Me at VueJS Confrence" /></span>
 								{%- if about.bio %}
 									{{ about.bio }}
 								{% endif %}
@@ -128,7 +125,7 @@ layout: page.njk
 						</div>
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
@@ -138,9 +135,9 @@ layout: page.njk
 
 		<!-- Scripts -->
 		{% if topjs %}
-			{% for link in topjs %}
-				<script src="{{link}}" />
-			{% endfor %}
+				{% for link in topjs %}
+					<script src="{{link}}" ></script>
+				{% endfor %}
     {% endif %}
 
 	</body>

@@ -6,7 +6,7 @@ export default {
     {
       name: 'bio',
       title: 'Bio',
-      type: 'blockContent',
+      type: 'text',
     },
     {
       name: 'image',

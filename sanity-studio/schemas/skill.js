@@ -6,7 +6,7 @@ export default {
     {
       name: "title",
       title: "Title",
-      type: "",
+      type: "string",
     },
     {
       name: "scale", // 1-5
