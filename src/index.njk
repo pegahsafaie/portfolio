@@ -1,7 +1,6 @@
 ---
 title: Pegah Safaie's Portfolio
-css: ["assets/css/main.css", "assets/css/noscript.css"]
-topjs: ["assets/js/jquery.min.js", "assets/js/browser.min.js", "assets/js/breakpoints.min.js", "assets/js/util.js", "assets/js/main.js"]
+topjs: ["assets/js/jquery.min.js", "assets/js/browser.min.js", "assets/js/breakpoints.min.js", "assets/js/util.js", "assets/js/main.js", "assets/js/sendEmail.js"]
 layout: page.njk
 ---
 
@@ -81,15 +80,19 @@ layout: page.njk
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form name="formcontact" onsubmit="return sendEmail()">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<label for="sender">Name</label>
+											<input type="text" name="sender" id="sender" />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="subject">Subject</label>
+											<input type="text" name="subject" id="subject"></input>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
