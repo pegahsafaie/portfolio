@@ -11,8 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "vercel dev",
-    "build": "npm --prefix ./src run build"
+    "start": "vercel dev"
   },
   "repository": {
     "type": "git",

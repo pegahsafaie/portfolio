@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport(transport);
     }
   });
 
-router.post('/sendEmail', (req,res, next) => {
+router.post('/api/sendEmail', (req,res, next) => {
   console.log(req.body);
   const mail = {
     from: process.env.THE_EMAIL,
