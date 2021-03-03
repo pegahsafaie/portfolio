@@ -106,3 +106,4 @@ dist
 # eleventy
 _site/
 .vercel
+public/

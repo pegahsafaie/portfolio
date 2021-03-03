@@ -2,16 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Pegah's Safaie Portfolio",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "nodemailer": "^6.5.0",
+  "devDependencies": {
     "vercel": "^21.3.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "build": "npm --prefix ./src run build"
   },
   "repository": {
     "type": "git",

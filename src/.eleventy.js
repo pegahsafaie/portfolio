@@ -11,6 +11,7 @@ module.exports = config => {
     markdownTemplateEngine: 'njk', // used in Markdown files
     dir: {
       input: '.',
+      output: '../public'
     }
 
   };

@@ -1,11 +1,7 @@
-import { NowRequest, NowResponse } from "@vercel/node";
+const express = require('express')
+const router = express.Router()
 const nodemailer = require('nodemailer')
 require('dotenv').config()
-
-console.log('########################');
-console.log(process.env.THE_EMAIL);
-console.log('########################');
-
 const transport = {
   //all of the configuration for making a site send an email.
 
@@ -13,8 +9,8 @@ const transport = {
   port: 587,
   secure: false,
   auth: {
-    user: process.env.THE_EMAIL,
-    pass: process.env.THE_PASSWORD
+    user: 'pegahsafaie@gmail.com',
+    pass: '3Pig.com'
   }
 }
 
@@ -29,8 +25,8 @@ const transporter = nodemailer.createTransport(transport);
     }
   });
 
-
-export default (req, res) => {  
+router.post('/sendEmail', (req,res, next) => {
+  console.log(req.body);
   const mail = {
     from: process.env.THE_EMAIL,
     to: process.env.THE_EMAIL,
@@ -58,4 +54,6 @@ export default (req, res) => {
       })
     }
   })
-};
+});
+
+module.exports = router

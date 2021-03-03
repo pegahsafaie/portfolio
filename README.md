@@ -8,12 +8,16 @@ To Deploy Sanity -> currently it is not host anywhere. So anytime you want to ch
 run it locally and update the content and then let the Eleventy build the website using its values.
 
 To deploy Eleventy project ->
-0. go to src folder
-1. execute Eleventy -> it creates the output(for now one single file index.html) in the _site
-2. npm run deploy -> deploys the content of _site folder to pegahsafaie.dev
+either run vercel or push the changes to github. vercel will automatically build your project
 
 to run Eleventy locally ->
 0. go to src folder
 1. Eleventy --serve
 
 
+
+I use emailjs to send message but you can deploy your own mail-server and use it.
+I had cors problem and could not deploy both on the same host(ui and api in one repo)
+this project does that but I could not figure out how
+https://github.com/ngduc/vercel-express
+https://vercel.com/guides/upgrade-to-zero-configuration
