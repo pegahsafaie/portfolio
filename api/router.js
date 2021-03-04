@@ -9,8 +9,8 @@ const transport = {
   port: 587,
   secure: false,
   auth: {
-    user: 'pegahsafaie@gmail.com',
-    pass: '3Pig.com'
+    user: process.env.THE_EMAIL,
+    pass: process.env.THE_PASSWORD
   }
 }
 

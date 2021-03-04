@@ -16,6 +16,14 @@
       "dest": "public/index.html"
     },
     {
+      "src": "/images/(.+)",
+      "dest": "public/images/**"
+    },
+    {
+      "src": "/assets/css/(.+)",
+      "dest": "public/assets/css/**"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "api/index.js"
     }
