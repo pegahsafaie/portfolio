@@ -10,8 +10,7 @@ module.exports = config => {
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: 'njk', // used in Markdown files
     dir: {
-      input: '.',
-      output: '../public'
+      input: '.'
     }
 
   };
