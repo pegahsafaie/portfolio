@@ -21,3 +21,8 @@ I had cors problem and could not deploy both on the same host(ui and api in one 
 this project does that but I could not figure out how
 https://github.com/ngduc/vercel-express
 https://vercel.com/guides/upgrade-to-zero-configuration
+
+
+TODO:
+add skills
+add site map of this project

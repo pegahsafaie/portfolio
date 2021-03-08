@@ -7,6 +7,14 @@ var text = document.getElementById("message").value;
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
+var raw = JSON.stringify({
+  "email": email,
+  "subject": subject,
+  "name": name,
+  "text": text
+});
+
+
 var requestOptions = {
   method: 'POST',
   headers: myHeaders,
